@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI CALCULATOR</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+
+            background-color: grey;
+            font-family: monospace, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+
+        }
+
+        .container h1 {
+            margin: 3%;
+        }
+
+        .container form p {
+            margin: 2%;
+        }
+
+        .container form p input {
+            font-size: large;
+            cursor: text;
+            background-color: grey;
+            padding: 1% 4%;
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        .container form button {
+            margin-top: 1%;
+            margin-bottom: 2%;
+            padding: 0.5% 2%;
+        }
+
+        button {
+            border: 2px solid transparent;
+            border-radius: 15px;
+            font-size: x-large;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+            background-color: grey;
+            cursor: pointer;
+        }
+
+        #result {
+            font-size: large;
+            color: whitesmoke;
+            margin-bottom: 1%;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            gap: 70px;
+            font-family: monospace, sans-serif;
+
+        }
+
+        #btn2 {
+            padding: 0% 3.5%;
+        }
+
+        @media (max-width:480px) {
+            .container h1 {
+                text-align: center;
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+
+            .container form p {
+                text-align: center;
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+
+            .container form button {
+                margin-top: 40px;
+                margin-bottom: 40px;
+            }
+
+            #result {
+                margin-top: 40px;
+                margin-bottom: 40px;
+
+            }
+
+            .btn {
+                display: flex;
+                justify-content: center;
+                gap: 55px;
+                font-family: monospace, sans-serif;
+            }
+
+            #btn2 {
+                padding: 0% 3.5%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+
+        <form>
+            <p><label>Height in CM: </label><input type="text" id="height"></p>
+            <p><label>Weight in KG: </label><input type="text" id="Weight"></p>
+            <div class="btn">
+                <button>Calculate</button><br>
+                <button id="btn2">Clear</button>
+            </div>
+            <div id="result"></div>
+            <div id="weight-guide">
+                <h3>BMI Weight Guide</h3>
+                <p>Under Weight = Less than 18.6</p>
+                <p>Normal Weight = 18.6 and 24.9</p>
+                <p>Over Weight = Greater than 24.9</p>
+            </div>
+        </form>
+    </div>
+    <script src="bmi.js"></script>
+</body>
+
+</html>
